@@ -58,6 +58,7 @@ namespace BoatAttack
         {
             _playerIndex = player - 1;
             cam.gameObject.layer = LayerMask.NameToLayer("Player" + player); // assign player layer
+            cam.gameObject.SetActive(isHuman);
             SetupController(isHuman); // create or change controller
             Colorize(livery);
         }

@@ -62,7 +62,7 @@ namespace BoatAttack.UI
                     break;
             }
 
-            StartCoroutine(SetupPlayerMarkers(player));
+            //StartCoroutine(SetupPlayerMarkers(player));
             StartCoroutine(SetupPlayerMapMarkers());
             StartCoroutine(CreateGameStats());
         }

@@ -66,8 +66,15 @@ namespace BoatAttack
         [Header("Assets")] public AssetReference[] boats;
         public AssetReference raceUiPrefab;
         public AssetReference raceUiTouchPrefab;
-        
-        public static void BoatFinished(int player)
+		public AssetReference countDownUI;
+
+        private IEnumerator EnableSpectator()
+        {
+            yield return new WaitForSeconds(5);
+			ReplayCamera.Instance.EnableSpectatorMode();
+		}
+
+		public static void BoatFinished(int player)
         {
             switch (RaceData.game)
             {
@@ -76,7 +83,8 @@ namespace BoatAttack
                     {
                         var raceUi = RaceData.boats[0].Boat.RaceUi;
                         raceUi.MatchEnd();
-                        ReplayCamera.Instance.EnableSpectatorMode();
+                        Instance.StartCoroutine("EnableSpectator");
+                        EndRace();
                     }
                     break;
                 case GameType.LocalMultiplayer:
@@ -91,8 +99,8 @@ namespace BoatAttack
                     throw new ArgumentOutOfRangeException();
             }
         }
-        
-        private void Awake()
+
+		private void Awake()
         {
             if(Debug.isDebugBuild)
                 Debug.Log("RaceManager Loaded");
@@ -204,6 +212,13 @@ namespace BoatAttack
                 introCams.SetActive(false);
             }
 
+			var uiAsset = Instance.countDownUI;
+			var uiLoading = uiAsset.InstantiateAsync();
+			yield return uiLoading;
+			if (uiLoading.Result.TryGetComponent(out CountDownUI uiComponent))
+			{
+				uiComponent.Begin(3);
+			}
             yield return new WaitForSeconds(3f); // countdown 3..2..1..
             
             RaceStarted = true;
@@ -215,7 +230,7 @@ namespace BoatAttack
         /// <summary>
         /// Triggered when the race has finished
         /// </summary>
-        private static void EndRace()
+        public static void EndRace()
         {
             RaceStarted = false;
             switch (RaceData.game)
