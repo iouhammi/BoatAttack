@@ -70,7 +70,7 @@ namespace BoatAttack
 
         private IEnumerator EnableSpectator()
         {
-            yield return new WaitForSeconds(5);
+            yield return new WaitForSeconds(10);
 			ReplayCamera.Instance.EnableSpectatorMode();
 		}
 

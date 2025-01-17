@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace BoatAttack.UI
 {
@@ -14,6 +15,7 @@ namespace BoatAttack.UI
         public TextMeshProUGUI boatType;
         public TextMeshProUGUI bestLap;
         public TextMeshProUGUI time;
+        public Image bg;
         private Boat _boat;
         private int _place = -1;
         private bool _update = true;
@@ -22,7 +24,11 @@ namespace BoatAttack.UI
         {
             _boat = boat;
             playerName.text = _boat.name;
-            boatType.text = "TODO"; // TODO - need to implement
+            boatType.text = ""; // TODO - need to implement
+            if(boat?._playerIndex == 0 )
+            {
+                bg.color = Color.yellow;
+            }
         }
 
         private void Update()

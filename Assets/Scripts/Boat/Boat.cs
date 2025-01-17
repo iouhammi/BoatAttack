@@ -35,7 +35,7 @@ namespace BoatAttack
         private float _camFovVel;
         [NonSerialized] public RaceUI RaceUi;
         private Object _controller;
-        private int _playerIndex;
+        public int _playerIndex;
 
         // Shader Props
         private static readonly int LiveryPrimary = Shader.PropertyToID("_Color1");
@@ -156,10 +156,11 @@ namespace BoatAttack
 
         private void EnteredWaypoint(int index, bool checkpoint)
         {
-            var count = WaypointGroup.Instance.WPs.Count;
-            var nextWp = (int) Mathf.Repeat(_wpCount + 1, count);
+			var count = WaypointGroup.Instance.WPs.Count;
+            var nextWp = (int) Mathf.Repeat(Mathf.Max(_wpCount + 1, index), count);
+			Debug.Log("Player " + _playerIndex +" " + " entered waypoint Index: " + index + ", Next: "+nextWp+", Lap: "+LapCount);
 
-            if (nextWp != index) return;
+			if (nextWp > index) return;
             _wpCount = nextWp;
 
             if (index != 0) return;

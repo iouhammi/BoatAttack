@@ -24540,6 +24540,7 @@ MonoBehaviour:
   engineRenderer: {fileID: 3607957023957793550}
   engine: {fileID: 4301521246144889673}
   cam: {fileID: 2365855355768168390}
+  _playerIndex: 0
   debugControl: 0
 --- !u!114 &114571606569623246
 MonoBehaviour:

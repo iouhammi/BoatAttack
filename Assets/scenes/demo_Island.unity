@@ -1306,42 +1306,6 @@ MonoBehaviour:
   m_TrackingType: 0
   m_UpdateType: 0
   m_UseRelativeTransform: 0
---- !u!84 &782230123
-RenderTexture:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: WaterDepthMap
-  m_ImageContentsHash:
-    serializedVersion: 2
-    Hash: 00000000000000000000000000000000
-  m_ForcedFallbackFormat: 4
-  m_DownscaleFallback: 0
-  m_IsAlphaChannelOptional: 0
-  serializedVersion: 3
-  m_Width: 1024
-  m_Height: 1024
-  m_AntiAliasing: 1
-  m_MipCount: -1
-  m_DepthFormat: 2
-  m_ColorFormat: 142
-  m_MipMap: 0
-  m_GenerateMips: 1
-  m_SRGB: 0
-  m_UseDynamicScale: 0
-  m_BindMS: 0
-  m_EnableCompatibleFormat: 1
-  m_TextureSettings:
-    serializedVersion: 2
-    m_FilterMode: 1
-    m_Aniso: 1
-    m_MipBias: 0
-    m_WrapU: 1
-    m_WrapV: 1
-    m_WrapW: 1
-  m_Dimension: 2
-  m_VolumeDepth: 1
 --- !u!1 &871694111
 GameObject:
   m_ObjectHideFlags: 3
@@ -1402,31 +1366,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4419020640412130, guid: 114b3c3ce4645364a97c8f0803bed65b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -20.549393
+      value: 94.45
       objectReference: {fileID: 0}
     - target: {fileID: 4419020640412130, guid: 114b3c3ce4645364a97c8f0803bed65b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 14
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4419020640412130, guid: 114b3c3ce4645364a97c8f0803bed65b, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 49.59078
+      value: 86.1
       objectReference: {fileID: 0}
     - target: {fileID: 4419020640412130, guid: 114b3c3ce4645364a97c8f0803bed65b, type: 3}
       propertyPath: m_LocalRotation.w
-      value: -0.1695265
+      value: 0.5130581
       objectReference: {fileID: 0}
     - target: {fileID: 4419020640412130, guid: 114b3c3ce4645364a97c8f0803bed65b, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.03760934
+      value: -0.059816625
       objectReference: {fileID: 0}
     - target: {fileID: 4419020640412130, guid: 114b3c3ce4645364a97c8f0803bed65b, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.96143246
+      value: -0.85050625
       objectReference: {fileID: 0}
     - target: {fileID: 4419020640412130, guid: 114b3c3ce4645364a97c8f0803bed65b, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.21329314
+      value: -0.099159166
       objectReference: {fileID: 0}
     - target: {fileID: 4419020640412130, guid: 114b3c3ce4645364a97c8f0803bed65b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -1643,6 +1607,42 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac0b09e7857660247b1477e93731de29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!84 &1360474863
+RenderTexture:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: WaterDepthMap
+  m_ImageContentsHash:
+    serializedVersion: 2
+    Hash: 00000000000000000000000000000000
+  m_ForcedFallbackFormat: 4
+  m_DownscaleFallback: 0
+  m_IsAlphaChannelOptional: 0
+  serializedVersion: 3
+  m_Width: 1024
+  m_Height: 1024
+  m_AntiAliasing: 1
+  m_MipCount: -1
+  m_DepthFormat: 2
+  m_ColorFormat: 142
+  m_MipMap: 0
+  m_GenerateMips: 1
+  m_SRGB: 0
+  m_UseDynamicScale: 0
+  m_BindMS: 0
+  m_EnableCompatibleFormat: 1
+  m_TextureSettings:
+    serializedVersion: 2
+    m_FilterMode: 1
+    m_Aniso: 1
+    m_MipBias: 0
+    m_WrapU: 1
+    m_WrapV: 1
+    m_WrapW: 1
+  m_Dimension: 2
+  m_VolumeDepth: 1
 --- !u!4 &1381079092 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1509010003780451918, guid: c83d63619306b0845a841dd3cc213a70,
@@ -2386,9 +2386,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: IngameDebugConsole
       objectReference: {fileID: 0}
+    - target: {fileID: 132536, guid: 67117722a812a2e46ab8cb8eafbf5f5e, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 11418932, guid: 67117722a812a2e46ab8cb8eafbf5f5e, type: 3}
       propertyPath: m_Enabled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11452418, guid: 67117722a812a2e46ab8cb8eafbf5f5e, type: 3}
+      propertyPath: startMinimized
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11452418, guid: 67117722a812a2e46ab8cb8eafbf5f5e, type: 3}
+      propertyPath: popupVisibility
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 22426080, guid: 67117722a812a2e46ab8cb8eafbf5f5e, type: 3}
       propertyPath: m_AnchorMax.x
@@ -2796,6 +2808,121 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalRotation.z
       value: -0.21329314
+      objectReference: {fileID: 0}
+    - target: {fileID: 1753825905008727153, guid: e70416e3bc35d4004a9981d0ac102ba5,
+        type: 3}
+      propertyPath: length
+      value: 583.0426
+      objectReference: {fileID: 0}
+    - target: {fileID: 1753825905008727153, guid: e70416e3bc35d4004a9981d0ac102ba5,
+        type: 3}
+      propertyPath: WPs.Array.data[10].width
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1753825905008727153, guid: e70416e3bc35d4004a9981d0ac102ba5,
+        type: 3}
+      propertyPath: WPs.Array.data[14].width
+      value: 7.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1753825905008727153, guid: e70416e3bc35d4004a9981d0ac102ba5,
+        type: 3}
+      propertyPath: WPs.Array.data[10].point.x
+      value: 127.38
+      objectReference: {fileID: 0}
+    - target: {fileID: 1753825905008727153, guid: e70416e3bc35d4004a9981d0ac102ba5,
+        type: 3}
+      propertyPath: WPs.Array.data[10].point.z
+      value: -32.88
+      objectReference: {fileID: 0}
+    - target: {fileID: 1753825905008727153, guid: e70416e3bc35d4004a9981d0ac102ba5,
+        type: 3}
+      propertyPath: WPs.Array.data[7].isCheckpoint
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1753825905008727153, guid: e70416e3bc35d4004a9981d0ac102ba5,
+        type: 3}
+      propertyPath: WPs.Array.data[10].isCheckpoint
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1753825905008727153, guid: e70416e3bc35d4004a9981d0ac102ba5,
+        type: 3}
+      propertyPath: WPs.Array.data[11].isCheckpoint
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1753825905008727153, guid: e70416e3bc35d4004a9981d0ac102ba5,
+        type: 3}
+      propertyPath: WPs.Array.data[14].isCheckpoint
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1753825905008727153, guid: e70416e3bc35d4004a9981d0ac102ba5,
+        type: 3}
+      propertyPath: WPs.Array.data[1].normalizedDistance
+      value: 0.059457652
+      objectReference: {fileID: 0}
+    - target: {fileID: 1753825905008727153, guid: e70416e3bc35d4004a9981d0ac102ba5,
+        type: 3}
+      propertyPath: WPs.Array.data[2].normalizedDistance
+      value: 0.1325286
+      objectReference: {fileID: 0}
+    - target: {fileID: 1753825905008727153, guid: e70416e3bc35d4004a9981d0ac102ba5,
+        type: 3}
+      propertyPath: WPs.Array.data[3].normalizedDistance
+      value: 0.18057097
+      objectReference: {fileID: 0}
+    - target: {fileID: 1753825905008727153, guid: e70416e3bc35d4004a9981d0ac102ba5,
+        type: 3}
+      propertyPath: WPs.Array.data[4].normalizedDistance
+      value: 0.23413888
+      objectReference: {fileID: 0}
+    - target: {fileID: 1753825905008727153, guid: e70416e3bc35d4004a9981d0ac102ba5,
+        type: 3}
+      propertyPath: WPs.Array.data[5].normalizedDistance
+      value: 0.28504592
+      objectReference: {fileID: 0}
+    - target: {fileID: 1753825905008727153, guid: e70416e3bc35d4004a9981d0ac102ba5,
+        type: 3}
+      propertyPath: WPs.Array.data[6].normalizedDistance
+      value: 0.34174034
+      objectReference: {fileID: 0}
+    - target: {fileID: 1753825905008727153, guid: e70416e3bc35d4004a9981d0ac102ba5,
+        type: 3}
+      propertyPath: WPs.Array.data[7].normalizedDistance
+      value: 0.38766003
+      objectReference: {fileID: 0}
+    - target: {fileID: 1753825905008727153, guid: e70416e3bc35d4004a9981d0ac102ba5,
+        type: 3}
+      propertyPath: WPs.Array.data[8].normalizedDistance
+      value: 0.44632718
+      objectReference: {fileID: 0}
+    - target: {fileID: 1753825905008727153, guid: e70416e3bc35d4004a9981d0ac102ba5,
+        type: 3}
+      propertyPath: WPs.Array.data[9].normalizedDistance
+      value: 0.53912485
+      objectReference: {fileID: 0}
+    - target: {fileID: 1753825905008727153, guid: e70416e3bc35d4004a9981d0ac102ba5,
+        type: 3}
+      propertyPath: WPs.Array.data[10].normalizedDistance
+      value: 0.62403107
+      objectReference: {fileID: 0}
+    - target: {fileID: 1753825905008727153, guid: e70416e3bc35d4004a9981d0ac102ba5,
+        type: 3}
+      propertyPath: WPs.Array.data[11].normalizedDistance
+      value: 0.7252824
+      objectReference: {fileID: 0}
+    - target: {fileID: 1753825905008727153, guid: e70416e3bc35d4004a9981d0ac102ba5,
+        type: 3}
+      propertyPath: WPs.Array.data[12].normalizedDistance
+      value: 0.80333936
+      objectReference: {fileID: 0}
+    - target: {fileID: 1753825905008727153, guid: e70416e3bc35d4004a9981d0ac102ba5,
+        type: 3}
+      propertyPath: WPs.Array.data[13].normalizedDistance
+      value: 0.88158715
+      objectReference: {fileID: 0}
+    - target: {fileID: 1753825905008727153, guid: e70416e3bc35d4004a9981d0ac102ba5,
+        type: 3}
+      propertyPath: WPs.Array.data[14].normalizedDistance
+      value: 0.9453149
       objectReference: {fileID: 0}
     - target: {fileID: 3297373807510930572, guid: e70416e3bc35d4004a9981d0ac102ba5,
         type: 3}
@@ -3346,7 +3473,7 @@ PrefabInstance:
         type: 3}
       propertyPath: _depthTex
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1360474863}
     - target: {fileID: 7121332023826027706, guid: e70416e3bc35d4004a9981d0ac102ba5,
         type: 3}
       propertyPath: m_Enabled

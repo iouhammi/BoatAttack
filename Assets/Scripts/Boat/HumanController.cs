@@ -73,6 +73,21 @@ namespace BoatAttack
             engine.Accelerate(_throttle);
             engine.Turn(_steering);
         }
+
+        private float _idleTime = 0f;
+        void LateUpdate()
+        {
+			if (RaceManager.RaceStarted)
+			{
+				if (_idleTime > 3f) // if been idle for 3 seconds assume AI is stuck
+				{
+					Debug.Log($"AI boat {gameObject.name} was stuck, re-spawning.");
+					_idleTime = 0f;
+					controller.ResetPosition();
+				}
+				_idleTime = (engine.VelocityMag < 0.15f || transform.up.y < 0) ? _idleTime + Time.deltaTime : _idleTime = 0f;
+			}
+		}
     }
 }
 
