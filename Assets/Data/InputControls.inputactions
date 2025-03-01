@@ -11,7 +11,8 @@
                     "id": "591093b7-743c-42e6-b71e-bab02d178bd1",
                     "expectedControlType": "Axis",
                     "processors": "AxisDeadzone(min=0.1,max=1)",
-                    "interactions": ""
+                    "interactions": "",
+                    "initialStateCheck": true
                 },
                 {
                     "name": "Steering",
@@ -19,7 +20,8 @@
                     "id": "67e3403a-b3e8-43af-ab52-4575ba23afef",
                     "expectedControlType": "Axis",
                     "processors": "AxisDeadzone(min=0.1,max=1)",
-                    "interactions": ""
+                    "interactions": "",
+                    "initialStateCheck": true
                 },
                 {
                     "name": "Reset",
@@ -27,7 +29,8 @@
                     "id": "218640d2-e6dc-4136-842e-4621c0883e15",
                     "expectedControlType": "",
                     "processors": "AxisDeadzone(min=0.1,max=1)",
-                    "interactions": ""
+                    "interactions": "",
+                    "initialStateCheck": false
                 },
                 {
                     "name": "Pause",
@@ -35,7 +38,8 @@
                     "id": "097a2ec8-8df3-4d48-96e5-fbf096270878",
                     "expectedControlType": "",
                     "processors": "AxisDeadzone(min=0.1,max=1)",
-                    "interactions": ""
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -109,6 +113,28 @@
                     "name": "positive",
                     "id": "e7382d1c-3b18-4582-9511-5569c858581e",
                     "path": "<Gamepad>/rightTrigger",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Gamepad",
+                    "action": "Trottle",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "positive",
+                    "id": "8da7c257-187a-4fb1-9c2f-ce7b688ec950",
+                    "path": "<HID::Logitech G29 Driving Force Racing Wheel>/z",
+                    "interactions": "",
+                    "processors": "Normalize(min=1)",
+                    "groups": "Gamepad",
+                    "action": "Trottle",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "positive",
+                    "id": "cb8888a9-9672-46c7-935c-a1f850b8b7fc",
+                    "path": "<HID::Logitech G29 Driving Force Racing Wheel>/button5",
                     "interactions": "",
                     "processors": "",
                     "groups": "Gamepad",
@@ -261,6 +287,17 @@
                 },
                 {
                     "name": "",
+                    "id": "1b78101b-fc38-4313-af89-0e4542d336d4",
+                    "path": "<Joystick>/stick/x",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Gamepad",
+                    "action": "Steering",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "7a7ffffc-09c1-403a-b879-7a91dfb5b29d",
                     "path": "<Gamepad>/select",
                     "interactions": "Press",
@@ -326,7 +363,8 @@
                     "id": "c57759c4-f215-4fe9-bd6c-1c835c6074bd",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "",
+                    "initialStateCheck": false
                 },
                 {
                     "name": "TimeOfDay",
@@ -334,7 +372,8 @@
                     "id": "bfb079cd-5e64-4031-b061-eb65384dacba",
                     "expectedControlType": "",
                     "processors": "AxisDeadzone(min=0.1,max=1)",
-                    "interactions": ""
+                    "interactions": "",
+                    "initialStateCheck": true
                 }
             ],
             "bindings": [
