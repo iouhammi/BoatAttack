@@ -1818,7 +1818,7 @@ MonoBehaviour:
   ended: 0
   timer: 0
   resultDelay: 20
-  maxTime: 240
+  maxTime: 220
   audioSource: {fileID: 1457379616}
 --- !u!4 &1457379615
 Transform:
